@@ -14,6 +14,17 @@
     background: linear-gradient(rgb(97, 189, 212),rgb(255, 253, 253));
 }
 
+.start-game {
+    width: 200px;
+    margin-top: 20px;
+    background: white;
+    border: 0;
+}
+
+.start-button {
+    border: none;
+}
+
 .pipe {
     position: absolute;
     bottom: 0%;
