@@ -1,6 +1,6 @@
 # Mario Game
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdwIQu3QivsQRAPTQSUq94U93VXGzwqZUD5w&usqp=CAU" alt="Jogo do Mario">
+<img src="./images/mario-game.jpeg" alt="Jogo do Mario">
 
 > O jogo foi baseado no jogo de dinossauro do google de quando ficamos sem internet
 
