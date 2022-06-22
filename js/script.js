@@ -1,5 +1,3 @@
-// alert('Use the space bar for jump')
-
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const clouds = document.querySelector('.clouds')
@@ -10,7 +8,6 @@ const startButton = document.querySelector('.start-button')
 let isPlaing = false
 
 pipe.style.animation = 'none'
-//mario.style.animation = 'none'
 clouds.style.animation = 'none'
 
 const jump = (event) => {
@@ -34,7 +31,6 @@ function validation() {
             pipe.style.animation = 'none'
             pipe.style.left = `${pipePosition}px`
     
-            //mario.style.animation = 'none'
             mario.classList.remove('jump')
             mario.style.bottom = `${marioPosition}px`
     
@@ -45,9 +41,14 @@ function validation() {
             mario.style.width = '75px ' 
             mario.style.marginLeft = '50px'
 
+            startButton.innerText = 'PLAY AGAIN'
             startButton.removeAttribute('disabled')
     
             isPlaing = false
+
+            if (!isPlaing) {
+                startButton.classList.remove('playing')
+            }
     
             clearInterval(loop)
         }
@@ -55,7 +56,6 @@ function validation() {
 }
 
 document.addEventListener('keydown', (event) => {
-    console.log(isPlaing)
     if (isPlaing) {
         jump(event)
     }
@@ -68,11 +68,21 @@ animation = {
 }
 
 function start() {
-    
+    const verifyButton = startButton.classList.contains('playing')
+    if (verifyButton) {
+        return
+    }
+
     isPlaing = true
+
+    if (isPlaing) {
+        startButton.classList.add('playing')
+    }
+    
+
     validation()
     pipe.style.animation = animation.pipe
-    //mario.style.animation = animation.mario
+
     clouds.style.animation = animation.clouds
 
     pipe.style.left = ``

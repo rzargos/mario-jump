@@ -22,7 +22,23 @@
 }
 
 .start-button {
-    border: none;
+   all: unset;
+   padding: 8px 16px;
+   background-color: #4EB947;
+   border: 1px solid #1a1a1a;
+   border-radius: 8px;
+   font-family: 'Press Start 2P';
+   transition: 0.2s;
+   cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #60c759;
+}
+
+.playing {
+    opacity: 0.8;
+    cursor: not-allowed;
 }
 
 .pipe {
