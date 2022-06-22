@@ -4,6 +4,9 @@ const clouds = document.querySelector('.clouds')
 const gameOver = document.querySelector('.game-over')
 const gameBoard = document.querySelector('.game-board')
 const startButton = document.querySelector('.start-button')
+const pontuation = document.querySelector('.score')
+let isScore = false
+let score = 0
 
 let isPlaing = false
 
@@ -19,13 +22,27 @@ const jump = (event) => {
         },500)
     }
 }
+
 function validation() {
     const loop = setInterval(() => {
     
         const pipePosition = pipe.offsetLeft
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px','')
+        const marioWidth = mario.offsetLeft
         const cloudsPosition = clouds.offsetLeft
-    
+        //console.log(marioWidth)
+
+        if (pipePosition <= 0 && isScore == false) {
+            score++
+            isScore = true
+            pontuation.innerHTML = `Score: ${score}`
+            console.log(score)
+        }
+        
+        if (pipePosition > 0) {
+            isScore = false
+        }
+
         if (pipePosition <= 120 && pipePosition > 0  && marioPosition < 80) {
     
             pipe.style.animation = 'none'
@@ -73,6 +90,8 @@ function start() {
         return
     }
 
+    score = 0
+    pontuation.innerHTML = `Score: ${score}`
     isPlaing = true
 
     if (isPlaing) {

@@ -19,6 +19,13 @@
     margin-top: 20px;
     background: white;
     border: 0;
+    margin: 10px;
+}
+
+.score {
+    font-family: 'Press Start 2P';
+    color: #c6752e;
+    padding: 10px;
 }
 
 .start-button {
