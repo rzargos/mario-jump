@@ -14,10 +14,6 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - Criar novos obstáculos
 - Por um score ✅
 
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
 ## 📝 Licença
 
 
