@@ -12,7 +12,7 @@ https://mario-jump-rzargos.netlify.app
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - Criar novos obstáculos
-- Por um score
+- Por um score ✅
 
 ## 😄 Seja um dos contribuidores<br>
 
